@@ -1,0 +1,7 @@
+{
+    "posts": [
+      { "id": 1, "name": "restaurant-app", "author": "reetu" },
+      { "id": 2, "name": "json-restro", "author": "reetu" },
+      { "id": 3, "name": "json-restro", "author": "reetu" }
+    ]
+}
