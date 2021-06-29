@@ -5,8 +5,9 @@ import RestaurantUpdate from './components/RestaurantUpdate';
 import RestaurantSearch from './components/RestaurantSearch';
 import RestaurantCreate from './components/RestaurantCreate';
 import Home from './components/Home';
+import {Nav} from 'react-bootstrap'
 
-import { 
+import {
   BrowserRouter as Router,
   Route,
   Link
@@ -15,22 +16,35 @@ import {
 function App() {
   return (
     <div className="App">
-        <Router>
-          <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/list">RestaurantList</Link></li>
-            <li><Link to="/create">RestaurantCreate</Link></li>
-            <li><Link to="/detail">RestaurantDetail</Link></li>
-            <li><Link to="/search">RestaurantSearch</Link></li>
-            <li><Link to="/update">RestaurantUpdate</Link></li>
-          </ul>
-          <Route path="/list"><RestaurantList/></Route>
-          <Route path="/create"><RestaurantCreate/></Route>
-          <Route path="/detail"><RestaurantDetail/></Route>
-          <Route path="/update"><RestaurantUpdate/></Route>
-          <Route path="/search"><RestaurantSearch/></Route>
-          <Route exact path="/"><Home/></Route>
-        </Router>
+      <Router>
+        <Nav>
+          <Nav.Item>
+            <Nav.Link><Link to="/">Home</Link></Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link><Link to="/list">RestaurantList</Link></Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link><Link to="/create">RestaurantCreate</Link></Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link><Link to="/detail">RestaurantDetail</Link></Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link><Link to="/search">RestaurantSearch</Link></Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link><Link to="/update">RestaurantUpdate</Link></Nav.Link>
+          </Nav.Item>
+        </Nav>
+       
+        <Route path="/list"><RestaurantList /></Route>
+        <Route path="/create"><RestaurantCreate /></Route>
+        <Route path="/detail"><RestaurantDetail /></Route>
+        <Route path="/update"><RestaurantUpdate /></Route>
+        <Route path="/search"><RestaurantSearch /></Route>
+        <Route exact path="/"><Home /></Route>
+      </Router>
     </div>
   );
 }
