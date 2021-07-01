@@ -1,7 +1,39 @@
 {
-    "posts": [
-      { "id": 1, "name": "restaurant-app", "author": "reetu" },
-      { "id": 2, "name": "json-restro", "author": "reetu" },
-      { "id": 3, "name": "json-restro", "author": "reetu" }
-    ]
+  "restaurant": [
+    {
+      "id": 1,
+      "name": "Burger-King",
+      "email": "bg@test.com",
+      "rating": "4.5",
+      "address": "Delhi"
+    },
+    {
+      "id": 2,
+      "name": "Pizza Hut",
+      "email": "pt@test.com",
+      "rating": "4.2",
+      "address": "Kanpur"
+    },
+    {
+      "id": 3,
+      "name": "KFC",
+      "email": "kfc@test.com",
+      "rating": "4.4",
+      "address": "Delhi"
+    },
+    {
+      "name": "Haldiram",
+      "email": "hd@gmail.com",
+      "rating": "4.5",
+      "address": "Noida",
+      "id": 4
+    },
+    {
+      "name": "Hadliram",
+      "email": "ram@gmail.com",
+      "rating": "4.8",
+      "address": "New Delhi",
+      "id": 5
+    }
+  ]
 }

@@ -1,0 +1,13 @@
+//create new app
+npx create-react-app appName
+
+//install router
+npm install react-router-dom
+
+//install bootstrap(simple bootstrap) and react bootstrap(with some feature like hide/show)
+npm i bootstrap react-bootstrap
+
+//json fake api server
+https://github.com/typicode/json-server
+json-server --watch db.json
+
