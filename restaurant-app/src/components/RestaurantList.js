@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
-import {Table} from 'react-bootstrap'
+import {Table} from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEdit, faTrash  } from '@fortawesome/free-solid-svg-icons';
+import {
+    Link
+  } from 'react-router-dom'
 
 class RestaurantList extends Component {
     constructor() {
@@ -29,6 +34,7 @@ class RestaurantList extends Component {
                                     <th>Email</th>
                                     <th>Rating</th>
                                     <th>Address</th>
+                                    <th>Update</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -40,6 +46,10 @@ class RestaurantList extends Component {
                                         <td>{item.email}</td>
                                         <td>{item.rating}</td>
                                         <td>{item.address}</td>
+                                        <td>
+                                            <Link to={"/update/"+item.id}><FontAwesomeIcon icon={faEdit} color="blue" /></Link>   &nbsp;&nbsp;
+                                            <Link to={"/update/"+item.id}><FontAwesomeIcon icon={faTrash} color="red" /></Link>
+                                        </td>
                                     </tr>
                                     )
                                 }                                

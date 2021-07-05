@@ -1,11 +1,12 @@
 {
   "restaurant": [
     {
-      "id": 1,
+      "list": null,
       "name": "Burger-King",
       "email": "bg@test.com",
-      "rating": "4.5",
-      "address": "Delhi"
+      "rating": "3.8",
+      "address": "Delhi",
+      "id": 1
     },
     {
       "id": 2,
@@ -16,7 +17,7 @@
     },
     {
       "id": 3,
-      "name": "KFC",
+      "name": "KFC1",
       "email": "kfc@test.com",
       "rating": "4.4",
       "address": "Delhi"
@@ -29,9 +30,10 @@
       "id": 4
     },
     {
-      "name": "Hadliram",
-      "email": "ram@gmail.com",
-      "rating": "4.8",
+      "list": null,
+      "name": "Bikaner",
+      "email": "bk@gmail.com",
+      "rating": "4.7",
       "address": "New Delhi",
       "id": 5
     }
