@@ -16,26 +16,11 @@
       "address": "Kanpur"
     },
     {
-      "id": 3,
-      "name": "KFC1",
-      "email": "kfc@test.com",
-      "rating": "4.4",
-      "address": "Delhi"
-    },
-    {
       "name": "Haldiram",
       "email": "hd@gmail.com",
       "rating": "4.5",
       "address": "Noida",
       "id": 4
-    },
-    {
-      "list": null,
-      "name": "Bikaner",
-      "email": "bk@gmail.com",
-      "rating": "4.7",
-      "address": "New Delhi",
-      "id": 5
     }
   ]
 }

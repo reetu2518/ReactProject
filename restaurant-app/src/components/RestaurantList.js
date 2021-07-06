@@ -14,9 +14,22 @@ class RestaurantList extends Component {
         }
     }
     componentDidMount () {
+        this.getData();
+    }
+    getData() {
         fetch("http://localhost:3000/restaurant").then((response)=>{
             response.json().then((result)=>{
                 this.setState({list:result})
+            })
+        })
+    }
+    delete (id) {
+        fetch("http://localhost:3000/restaurant/"+id,{
+            method: "DELETE"
+        }).then((result)=>{
+            result.json().then((resp)=>{
+                alert("Deleted Successfully!")
+                this.getData();
             })
         })
     }
@@ -48,7 +61,7 @@ class RestaurantList extends Component {
                                         <td>{item.address}</td>
                                         <td>
                                             <Link to={"/update/"+item.id}><FontAwesomeIcon icon={faEdit} color="blue" /></Link>   &nbsp;&nbsp;
-                                            <Link to={"/update/"+item.id}><FontAwesomeIcon icon={faTrash} color="red" /></Link>
+                                            <span onClick={()=>this.delete(item.id)}><FontAwesomeIcon icon={faTrash} color="red" /></span>
                                         </td>
                                     </tr>
                                     )
