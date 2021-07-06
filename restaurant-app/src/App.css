@@ -13,7 +13,12 @@
   height: 40vmin;
   pointer-events: none;
 }
-
+.search-row {
+  margin : 20px auto;
+  padding: 20px 10 px;
+  background-color: aqua;
+  width: 200px;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
