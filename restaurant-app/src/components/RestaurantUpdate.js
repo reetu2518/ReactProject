@@ -19,7 +19,7 @@ class RestaurantUpdate extends Component {
                 this.setState({
                     name:result.name,
                     email:result.email,
-                    rating:result.email,
+                    rating:result.rating,
                     address:result.address,
                     id: result.id
                 })
