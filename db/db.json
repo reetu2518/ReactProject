@@ -1,4 +1,10 @@
 {
+  "login": [
+    {
+      "name":"reetu",
+      "password":"123"
+    }
+  ],
   "restaurant": [
     {
       "list": null,
