@@ -1,6 +1,5 @@
 import './App.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faList, faSearch, faHome, faPlus, faUser } from '@fortawesome/free-solid-svg-icons'
+
 import RestaurantList from './components/RestaurantList';
 import RestaurantDetail from './components/RestaurantDetail';
 import RestaurantUpdate from './components/RestaurantUpdate';
@@ -8,40 +7,32 @@ import RestaurantSearch from './components/RestaurantSearch';
 import RestaurantCreate from './components/RestaurantCreate';
 import Login from './components/Login';
 import Home from './components/Home';
-import {Nav} from 'react-bootstrap'
-
+import Logout from './components/Logout';
+import Protected from './components/Protected';
 import {
   BrowserRouter as Router,
-  Route,
-  Link
+  Route
 } from 'react-router-dom'
 
 function App() {
   return (
     <div className="App">
-      <Router>
-        <Nav>
-          <Nav.Item><Nav.Link><Link to="/"><FontAwesomeIcon icon={faHome} /> Home</Link></Nav.Link></Nav.Item>
-          <Nav.Item><Nav.Link><Link to="/list"><FontAwesomeIcon icon={faList} /> List</Link></Nav.Link></Nav.Item>
-          <Nav.Item><Nav.Link><Link to="/create"><FontAwesomeIcon icon={faPlus} /> Create</Link></Nav.Link></Nav.Item>
-          <Nav.Item><Nav.Link><Link to="/search"><FontAwesomeIcon icon={faSearch} /> Search</Link></Nav.Link></Nav.Item>
-          <Nav.Item><Nav.Link><Link to="/login"><FontAwesomeIcon icon={faUser} /> Login</Link></Nav.Link></Nav.Item>
-          {/* <Nav.Item>
-            <Nav.Link><Link to="/detail">RestaurantDetail</Link></Nav.Link>
-          </Nav.Item> */}
-        </Nav>
-       
-        <Route path="/list"><RestaurantList /></Route>
-        <Route path="/create"><RestaurantCreate /></Route>
-        <Route path="/detail"><RestaurantDetail /></Route>
-        <Route path="/update/:id" render={props=>(
+      <Router>       
+        {/* <Route path="/update/:id" render={props=>(
           <RestaurantUpdate {...props} />
-        )}></Route>
+        )}></Route> */}
         <Route path="/login" render={props=>(
           <Login {...props} />
         )}></Route>
-        <Route path="/search"><RestaurantSearch /></Route>
-        <Route exact path="/"><Home /></Route>
+        <Route path="/logout" render={props=>(
+          <Logout {...props} />
+        )}></Route>
+        <Protected path="/update/:id" component={RestaurantUpdate}/>
+        <Protected path="/detail" component={RestaurantDetail}/>
+        <Protected path="/list" component={RestaurantList}/>
+        <Protected path="/create" component={RestaurantCreate}/>
+        <Protected path="/search" component={RestaurantSearch}/>
+        <Protected exact path="/" component={Home}/>
       </Router>
     </div>
   );

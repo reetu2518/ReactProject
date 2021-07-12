@@ -5,6 +5,7 @@ import { faEdit, faTrash  } from '@fortawesome/free-solid-svg-icons';
 import {
     Link
   } from 'react-router-dom'
+  import NavMenu from './NavMenu';
 
 class RestaurantList extends Component {
     constructor() {
@@ -36,6 +37,7 @@ class RestaurantList extends Component {
     render() {
         return (
             <div>
+                <NavMenu />
                 <h1>Restaurant List</h1>
                 {this.state.list?
                     <div>

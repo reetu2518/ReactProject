@@ -1,25 +1,18 @@
 {
   "login": [
     {
-      "name":"reetu",
-      "password":"123"
+      "name": "reetu",
+      "password": "123"
     }
   ],
   "restaurant": [
     {
       "list": null,
-      "name": "Burger-King",
-      "email": "bg@test.com",
-      "rating": "3.9",
-      "address": "Delhi",
-      "id": 1
-    },
-    {
-      "id": 2,
       "name": "Pizza Hut",
       "email": "pt@test.com",
-      "rating": "4.2",
-      "address": "Kanpur"
+      "rating": "4.4",
+      "address": "Kanpur",
+      "id": 2
     },
     {
       "name": "Haldiram",
@@ -35,6 +28,13 @@
       "rating": "2.3",
       "address": "Delhi",
       "id": 5
+    },
+    {
+      "name": "Burge King",
+      "email": "bg@abc.com",
+      "rating": "4.9",
+      "address": "Delhi",
+      "id": 6
     }
   ]
 }

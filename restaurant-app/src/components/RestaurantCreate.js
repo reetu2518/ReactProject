@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import NavMenu from './NavMenu';
 
 class RestaurantCreate extends Component {
     constructor() {
@@ -26,6 +27,7 @@ class RestaurantCreate extends Component {
     render() {
         return (
             <div>
+                <NavMenu />
                 <h1>Restaurant Create</h1>
                 <input type="text" placeholder="Enter Name" onChange={(event)=>this.setState({name:event.target.value})}/> <br></br> <br></br>
                 <input type="text" placeholder="Enter email" onChange={(event)=>this.setState({email:event.target.value})} /> <br></br> <br></br>

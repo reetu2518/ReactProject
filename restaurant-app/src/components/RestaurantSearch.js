@@ -4,8 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEdit, faTrash  } from '@fortawesome/free-solid-svg-icons';
 import {
     Link
-  } from 'react-router-dom'
-
+  } from 'react-router-dom';
+import NavMenu from './NavMenu';
 class RestaurantSearch extends Component {
     constructor() {
         super()
@@ -41,6 +41,7 @@ class RestaurantSearch extends Component {
         
         return (
             <Container>
+                <NavMenu />
                 <h1>Restaurant Search</h1>
                 <Form.Control type="text" onChange={(e)=>this.search(e.target.value)} placeholder="Search"/>
                 {
